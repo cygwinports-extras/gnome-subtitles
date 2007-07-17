@@ -7,17 +7,17 @@ editing, conversion and synchronization.
 Runtime requirements:
   gconf-sharp2-2.16.0-1
   glade-sharp2-2.10.0-1
-  glib-sharp2-2.10.0-1
+  glib-sharp2-2.10.1-1
   gnome-sharp2-2.16.0-1
-  gtk-sharp2-2.10.0-1
-  mono-1.2.3.1-1
+  gtk-sharp2-2.10.1-1
+  mono-1.2.4-1
 
 Build requirements:
 (besides corresponding -devel packages)
   cygwin-1.5.24-2
   autoconf2.5-2.61-1
   automake1.9-1.9.6-2
-  cygport-0.2.11-1
+  cygport-0.3.5-1
   gawk-3.1.5-4
   make-3.81-1
   pkg-config-0.21-1
@@ -32,15 +32,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnome-subtitles-0.4-X-src.tar.bz2
+  unpack gnome-subtitles-0.6-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gnome-subtitles-0.4-X.cygport all
+  cygport ./gnome-subtitles-0.6-X.cygport all
 
 This will create:
-  /usr/src/gnome-subtitles-0.4-X-src.tar.bz2
-  /usr/src/gnome-subtitles-0.4-X.tar.bz2
+  /usr/src/gnome-subtitles-0.6-X-src.tar.bz2
+  /usr/src/gnome-subtitles-0.6-X.tar.bz2
 
 -------------------------------------------
 
@@ -53,20 +53,35 @@ Files included in the binary package:
   /usr/lib/gnome-subtitles/gnome-subtitles.exe
   /usr/lib/gnome-subtitles/sublib.dll
   /usr/share/applications/gnome-subtitles.desktop
-  /usr/share/doc/Cygwin/gnome-subtitles-0.4.README
-  /usr/share/doc/gnome-subtitles-0.4/AUTHORS
-  /usr/share/doc/gnome-subtitles-0.4/COPYING
-  /usr/share/doc/gnome-subtitles-0.4/CREDITS
-  /usr/share/doc/gnome-subtitles-0.4/ChangeLog
-  /usr/share/doc/gnome-subtitles-0.4/INSTALL
-  /usr/share/doc/gnome-subtitles-0.4/NEWS
-  /usr/share/doc/gnome-subtitles-0.4/README
-  /usr/share/doc/gnome-subtitles-0.4/TODO
+  /usr/share/doc/Cygwin/gnome-subtitles-0.6.README
+  /usr/share/doc/gnome-subtitles-0.6/AUTHORS
+  /usr/share/doc/gnome-subtitles-0.6/COPYING
+  /usr/share/doc/gnome-subtitles-0.6/CREDITS
+  /usr/share/doc/gnome-subtitles-0.6/ChangeLog
+  /usr/share/doc/gnome-subtitles-0.6/INSTALL
+  /usr/share/doc/gnome-subtitles-0.6/NEWS
+  /usr/share/doc/gnome-subtitles-0.6/README
+  /usr/share/doc/gnome-subtitles-0.6/TODO
+  /usr/share/gnome/help/gnome-subtitles/C/gnome-subtitles.xml
+  /usr/share/gnome/help/gnome-subtitles/C/legal.xml
+  /usr/share/gnome/help/gnome-subtitles/ca/gnome-subtitles.xml
+  /usr/share/gnome/help/gnome-subtitles/sv/gnome-subtitles.xml
+  /usr/share/locale/ca/LC_MESSAGES/gnome-subtitles.mo
+  /usr/share/locale/dz/LC_MESSAGES/gnome-subtitles.mo
+  /usr/share/locale/es/LC_MESSAGES/gnome-subtitles.mo
+  /usr/share/locale/sv/LC_MESSAGES/gnome-subtitles.mo
+  /usr/share/man/man1/gnome-subtitles.1.gz
+  /usr/share/omf/gnome-subtitles/gnome-subtitles-C.omf
+  /usr/share/omf/gnome-subtitles/gnome-subtitles-ca.omf
+  /usr/share/omf/gnome-subtitles/gnome-subtitles-sv.omf
   /usr/share/pixmaps/gnome-subtitles.png
 
 ------------------
 
 Port Notes:
+
+----- version 0.6-1 -----
+Version bump.
 
 ----- version 0.4-1 -----
 Version bump.
