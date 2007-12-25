@@ -7,13 +7,13 @@ editing, conversion and synchronization.
 Runtime requirements:
   cygwin-1.5.24-2
   gconf-sharp2-2.16.0-1
-  glade-sharp2-2.10.0-1
-  glib-sharp2-2.10.1-1
-  glib2-2.12.13-1
+  glade-sharp2-2.10.2-1
+  glib-sharp2-2.10.2-1
+  glib2-2.14.4-1
   gnome-sharp2-2.16.0-1
   gstreamer010-0.10.14-1
   gstreamer010-plugins-base-0.10.14-1
-  gtk-sharp2-2.10.1-1
+  gtk-sharp2-2.10.2-1
   mono-1.2.5-1
 
 Build requirements:
@@ -36,15 +36,15 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack gnome-subtitles-0.7-X-src.tar.bz2
+  unpack gnome-subtitles-0.7.1-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./gnome-subtitles-0.7-X.cygport all
+  cygport ./gnome-subtitles-0.7.1-X.cygport all
 
 This will create:
-  /usr/src/gnome-subtitles-0.7-X-src.tar.bz2
-  /usr/src/gnome-subtitles-0.7-X.tar.bz2
+  /usr/src/gnome-subtitles-0.7.1-X-src.tar.bz2
+  /usr/src/gnome-subtitles-0.7.1-X.tar.bz2
 
 -------------------------------------------
 
@@ -59,14 +59,14 @@ Files included in the binary package:
   /usr/lib/gnome-subtitles/gnome-subtitles.exe
   /usr/lib/gnome-subtitles/sublib.dll
   /usr/share/applications/gnome-subtitles.desktop
-  /usr/share/doc/Cygwin/gnome-subtitles-0.7.README
-  /usr/share/doc/gnome-subtitles-0.7/AUTHORS
-  /usr/share/doc/gnome-subtitles-0.7/COPYING
-  /usr/share/doc/gnome-subtitles-0.7/CREDITS
-  /usr/share/doc/gnome-subtitles-0.7/ChangeLog
-  /usr/share/doc/gnome-subtitles-0.7/INSTALL
-  /usr/share/doc/gnome-subtitles-0.7/NEWS
-  /usr/share/doc/gnome-subtitles-0.7/README
+  /usr/share/doc/Cygwin/gnome-subtitles-0.7.1.README
+  /usr/share/doc/gnome-subtitles-0.7.1/AUTHORS
+  /usr/share/doc/gnome-subtitles-0.7.1/COPYING
+  /usr/share/doc/gnome-subtitles-0.7.1/CREDITS
+  /usr/share/doc/gnome-subtitles-0.7.1/ChangeLog
+  /usr/share/doc/gnome-subtitles-0.7.1/INSTALL
+  /usr/share/doc/gnome-subtitles-0.7.1/NEWS
+  /usr/share/doc/gnome-subtitles-0.7.1/README
   /usr/share/gnome/help/gnome-subtitles/C/gnome-subtitles.xml
   /usr/share/gnome/help/gnome-subtitles/C/legal.xml
   /usr/share/gnome/help/gnome-subtitles/ca/gnome-subtitles.xml
@@ -93,6 +93,9 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 0.7.1-1 -----
+Version bump.
 
 ----- version 0.7-1 -----
 Version bump.
