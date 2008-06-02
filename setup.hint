@@ -1,5 +1,5 @@
 category: Gnome Video
-requires: cygwin glib2 gstreamer010 gstreamer010-plugins-base gconf-sharp2 glib-sharp2 gtk-sharp2 glade-sharp2 gnome-sharp2 mono
+requires: cygwin enchant glib2 gstreamer010 gstreamer010-plugins-base gtkspell gconf-sharp2 glib-sharp2 gtk-sharp2 glade-sharp2 gnome-sharp2 mono sublib
 sdesc: "GNOME subtitle editor"
 ldesc: "Gnome Subtitles is a subtitle editor for the GNOME Desktop. It 
 supports the most common subtitle formats and allows for subtitle 
