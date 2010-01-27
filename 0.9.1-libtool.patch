@@ -1,0 +1,43 @@
+--- origsrc/gnome-subtitles-0.9.1/Makefile.am	2009-06-21 16:37:46.000000000 -0500
++++ src/gnome-subtitles-0.9.1/Makefile.am	2010-01-27 04:15:02.807009300 -0600
+@@ -2,12 +2,6 @@ SUBDIRS = src data po help
+ 
+ ACLOCAL_AMFLAGS = -I m4
+ 
+-gstpbdir = $(pkglibdir)
+-gstpb_SCRIPTS = build/libgstreamer_playbin.so
+-
+-$(gstpb_SCRIPTS):
+-	cp -f src/libgstreamer_playbin.so build
+-
+ dist-hook:
+ 	@if test -d "$(srcdir)/.git"; \
+ 	then \
+--- origsrc/gnome-subtitles-0.9.1/configure.ac	2009-07-18 12:46:35.000000000 -0500
++++ src/gnome-subtitles-0.9.1/configure.ac	2010-01-27 04:18:24.918569400 -0600
+@@ -18,6 +18,8 @@ IT_PROG_INTLTOOL([0.35.0])
+ AC_PROG_INSTALL
+ AC_PREFIX_PROGRAM(mono)
+ 
++AC_PROG_LIBTOOL
++
+ dnl Gettext stuff.
+ 
+ GETTEXT_PACKAGE=gnome-subtitles
+--- origsrc/gnome-subtitles-0.9.1/src/Makefile.am	2009-06-21 16:37:46.000000000 -0500
++++ src/gnome-subtitles-0.9.1/src/Makefile.am	2010-01-27 04:20:35.820056500 -0600
+@@ -8,9 +8,11 @@
+ ASSEMBLY_CONFIG = $(ASSEMBLY).config
+ 
+ AM_CFLAGS = $(gstreamer_CFLAGS) -Wall -g -fPIC
+-noinst_PROGRAMS = libgstreamer_playbin.so
+-libgstreamer_playbin_so_SOURCES = $(srcdir)/External/GStreamerPlaybin/main.c
+-libgstreamer_playbin_so_LDFLAGS = $(gstreamer_LIBS) -lgstinterfaces-0.10 -shared -Wl,--as-needed,-soname,libgstreamer_playbin.so
++
++pkglib_LTLIBRARIES = libgstreamer_playbin.la
++libgstreamer_playbin_la_SOURCES = $(srcdir)/External/GStreamerPlaybin/main.c
++libgstreamer_playbin_la_LDFLAGS = -module -avoid-version -no-undefined
++libgstreamer_playbin_la_LIBADD = $(gstreamer_LIBS) -lgstinterfaces-0.10
+ 
+ GS_SOURCES = \
+ 	$(srcdir)/External/GStreamerPlaybin/*.cs \

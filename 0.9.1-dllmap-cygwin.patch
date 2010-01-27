@@ -1,0 +1,9 @@
+--- origsrc/gnome-subtitles-0.9.1/build/gnome-subtitles.exe.config	2009-06-01 17:11:10.000000000 -0500
++++ src/gnome-subtitles-0.9.1/build/gnome-subtitles.exe.config	2010-01-27 04:16:47.852017500 -0600
+@@ -1,4 +1,4 @@
+ <configuration>
+-	<dllmap dll="libenchant" target="libenchant.so.1" />
+-	<dllmap dll="libgtkspell" target="libgtkspell.so.0" />
++	<dllmap dll="libenchant" target="cygenchant-1.dll" />
++	<dllmap dll="libgtkspell" target="cyggtkspell-0.dll" />
+ </configuration>

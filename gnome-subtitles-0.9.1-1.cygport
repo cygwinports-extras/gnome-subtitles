@@ -1,0 +1,11 @@
+inherit mono gnome2
+
+DESCRIPTION="GNOME subtitle editor"
+HOMEPAGE="http://gnome-subtitles.sourceforge.net/"
+SRC_URI=mirror://sourceforge/${PN}/${P}.tar.gz
+
+PATCH_URI="
+	0.9.1-dllmap-cygwin.patch
+	0.9.1-libtool.patch
+	0.9.1-vpath.patch
+"

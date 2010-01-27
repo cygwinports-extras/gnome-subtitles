@@ -1,0 +1,20 @@
+--- origsrc/gnome-subtitles-0.9.1/src/Makefile.am	2009-06-21 16:37:46.000000000 -0500
++++ src/gnome-subtitles-0.9.1/src/Makefile.am	2010-01-27 04:20:35.820056500 -0600
+@@ -1,7 +1,7 @@
+ gnomesubtitlesdir = $(pkglibdir)
+ gnomesubtitles_SCRIPTS = $(ASSEMBLY)
+ gnomesubtitles_DATA = $(ASSEMBLY_CONFIG)
+-GS_BUILDDIR = $(srcdir)/../build
++GS_BUILDDIR = $(top_builddir)/build
+ GS_DATADIR = $(srcdir)/../data
+ 
+ ASSEMBLY = $(GS_BUILDDIR)/gnome-subtitles.exe
+@@ -65,7 +67,7 @@ $(ASSEMBLY): $(GS_SOURCES) $(GS_RESOURCE
+ $(ASSEMBLY_CONFIG):
+ 	cp -f $(srcdir)/GnomeSubtitles/Execution/gnome-subtitles.exe.config $(GS_BUILDDIR)
+ 
+-bin_SCRIPTS = $(srcdir)/GnomeSubtitles/Execution/gnome-subtitles
++bin_SCRIPTS = GnomeSubtitles/Execution/gnome-subtitles
+ 
+ CLEANFILES = $(bin_SCRIPTS) $(ASSEMBLY) $(ASSEMBLY).mdb
+ EXTRA_DIST = $(gnomesubtitles_SOURCES) $(GS_SOURCES) $(GS_RESOURCES) $(ASSEMBLY_CONFIG)
