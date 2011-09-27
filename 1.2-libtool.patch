@@ -1,0 +1,11 @@
+--- origsrc/gnome-subtitles-1.2/src/Makefile.am
++++ src/gnome-subtitles-1.2/src/Makefile.am
+@@ -11,7 +11,7 @@ ASSEMBLY_CONFIG = $(ASSEMBLY).config
+ gnomesubtitles_LTLIBRARIES = libgstreamer_playbin.la
+ libgstreamer_playbin_la_SOURCES = $(srcdir)/External/GStreamerPlaybin/main.c
+ libgstreamer_playbin_la_LIBADD = $(gstreamer_LIBS) -lgstinterfaces-0.10
+-libgstreamer_playbin_la_LDFLAGS = -module -avoid-version
++libgstreamer_playbin_la_LDFLAGS = -module -avoid-version -no-undefined
+ libgstreamer_playbin_la_LIBTOOLFLAGS = --tag=disable-static 
+ 
+ GS_SOURCES = \
